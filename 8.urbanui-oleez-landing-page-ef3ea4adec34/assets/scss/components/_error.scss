@@ -1,0 +1,24 @@
+.error-page {
+    padding-top: 150px;
+    padding-bottom: 250px;
+
+    @media (max-width: 767px) {
+        padding-top: 70px;
+        padding-bottom: 110px;
+    }
+
+    .error-code {
+        font-size: 120px;
+        font-weight: $font-weight-bold;
+        line-height: 1;
+        margin-bottom: 15px;
+    }
+
+    .error-description {
+        font-size: 25px;
+        font-weight: $font-weight-light;
+        line-height: 1.4;
+        margin-bottom: 0;
+        max-width: 665px;
+    }
+}

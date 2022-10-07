@@ -1,0 +1,71 @@
+.contact-page {
+    padding-bottom: 120px;
+
+    .oleez-page-title {
+        margin-bottom: 43px;
+    }
+}
+
+.oleez-contact-form {
+    .oleez-input, .oleez-textarea {
+        width: 100%;
+    }
+
+    label {
+        font-size: 18px;
+        font-weight: $font-weight-bold;
+        margin-bottom: 10px;
+    }
+
+    .form-group {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .oleez-input {
+        border: 0;
+        border-bottom: 2px solid $black;
+        padding: 9px 0;
+        font-size: 16px;
+        font-weight: $font-weight-bold;
+
+        &:focus {
+            outline: none;
+        }
+
+        + label {
+            position: absolute;
+            margin-bottom: 0;
+            left: 0;
+            bottom: 9px;
+            transition: all 0.3s ease;
+        }
+
+        &:focus, &:valid {
+            + label {
+                bottom: 34px;
+                font-size: 12px;
+                font-weight: $font-weight-normal;
+            }
+        }
+    }
+
+    .oleez-textarea {
+        border: 2px solid #010101;
+    }
+
+    .btn-submit {
+        padding: 17px 50px;
+        background-color: #131212;
+        border-radius: 0;
+        color: $white;
+        font-size: 18px;
+        font-weight: $font-weight-bold;
+
+        &:hover {
+            background-color: transparent;
+            border: 1px solid #131212;
+            color: #131212;
+        }
+    }
+}

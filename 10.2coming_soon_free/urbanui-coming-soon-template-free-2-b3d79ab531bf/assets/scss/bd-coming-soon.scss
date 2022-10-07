@@ -1,0 +1,138 @@
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: #4c0459;
+    color: #ffffff;
+    padding-bottom: 75px;
+
+    @media (max-width: 767px) {
+        padding-bottom: 30px;
+    }
+}
+
+.section-left {
+    @media (max-width:991px) {
+        padding: 24px 40px;
+    }
+}
+
+.page-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 98px;
+
+    @media (max-width: 991px) {
+        font-size: 35px;
+        margin-bottom: 48px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 30px;
+        margin-bottom: 48px;
+    }
+}
+
+.bd-cd-timer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+
+    .time-card{
+        text-align: center;
+    }
+
+    .time-count {
+        display: block;
+        font-size: 80px;
+        font-weight: bold;
+
+        @media (max-width: 991px) {
+            font-size: 50px;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 30px;
+        }
+        
+    }
+    .time-label {
+        display: block;
+        font-size: 15px;
+
+        @media (max-width: 767px) {
+            font-size: 12px;
+        }
+    }
+}
+
+.form-subscribe {
+    display: flex;
+
+    .form-group {
+        margin-bottom: 0;
+        margin-right: 8px;
+        flex-grow: 1;
+        max-width: 300px;
+    }
+
+    .form-control {
+       padding: 16px 30px;
+       border: 1px solid rgba(#f5f5f5, 0.14);
+       border-radius: 4px;
+       background-color: rgba(#ffffff, 0.14);
+       font-size: 14px;
+       height: 48px;
+       color: #ffffff;
+
+       &::placeholder {
+           color: rgba(#ffffff, 0.6);
+       }
+    }
+
+    .btn-subscribe {
+        padding: 16px 20px;
+        font-size: 13px;
+        font-weight: bold;
+        color: #ffffff;
+        border-radius: 4px;
+        background-color: #ff5d29;
+        border: 0;
+        height: 48px;
+        white-space: nowrap;
+    }
+}
+
+
+.footer-social-links {
+    margin-bottom: 25px;
+
+    .social-link {
+        display: inline-block;
+        text-align: center;
+        line-height: 40px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 20px;
+        margin-right: 16px;
+        transition: all 0.3s ease-in-out;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            text-decoration: none;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        @media (max-width: 767px) {
+            line-height: 30px;
+            width: 30px;
+            height: 30px;
+            font-size: 14px;
+        }
+    }
+}

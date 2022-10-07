@@ -1,0 +1,535 @@
+.oleez-landing-carousel {
+    .carousel-item {
+        padding-left: 212px;
+        @media(max-width:767px) {
+            min-height: 50vh;
+        }
+
+        @media(max-width:400px) {
+            min-height: 350px;
+            padding-left: 162px;
+        }
+
+        img {
+            @media(max-width:767px) {
+                height: 50vh;
+                object-fit: cover;
+            }
+
+            @media(max-width:400px) {
+                min-height: 350px;
+            }
+        }
+
+        .carousel-caption {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 380px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h2 {
+                margin-bottom: 11px;
+                font-size: 50px;
+                font-weight: $font-weight-bold;
+                line-height: 1.8;
+                color: $body-color;
+
+                @media(max-width:400px) {
+                    font-size: 35px;
+                }
+
+                span {
+                    background-color: theme-color();
+                    display: inline-block;
+                    padding: 10px 30px;
+                }
+                
+                &:first-child {
+                    animation-delay: 0.2s;
+                }
+
+                &:nth-child(2) {
+                    animation-delay: 0.4s;
+                }
+            }
+
+            .carousel-item-link {
+                display: inline-block;
+                color: $body-color;
+                font-size: 14px;
+                font-weight: $font-weight-medium;
+                letter-spacing: 0.88px;
+                margin-top: 26px;
+                animation-delay: 0.6s;
+
+                &::after {
+                    content: "\2192";
+                    display: inline-block;
+                    margin-left: 11px;
+                    color: $black;
+                    font-size: 14px;
+                    transition: all 0.3s ease-in;
+                }
+
+                &:hover {
+                    color: $body-color;
+                    text-decoration: none;
+
+                    &::after {
+                        transform: translateX(5px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.oleez-landing-section {
+    padding-top: 130px;
+    padding-bottom: 125px;
+
+    &:nth-child(odd) {
+        background-color: #f8f4eb;
+
+        .oleez-landing-section-content .oleez-landing-section-verticals::after {
+            background-color: #dadada;
+        }
+    }
+
+    .oleez-landing-section-content {
+        padding-left: 212px;
+        position: relative;
+
+        @media(max-width:991px) {
+            padding-left: 112px;
+        }
+
+        @media(max-width:767px) {
+            padding-left: 50px;
+        }
+
+        .oleez-landing-section-verticals {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            padding-top: 11px;
+
+            .number {
+                font-size: 20px;
+                color: theme-color();
+                line-height: 1;
+                display: inline-block;
+                margin-right: 13px;
+            }
+
+            img {
+                position: relative;
+                top: -3px;
+
+                @media(max-width:767px) {
+                    display: none;
+                }
+            }
+
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 1px;
+                position: absolute;
+                top: 50px;
+                left: 11px;
+                bottom: 0;
+                background-color: #f8f4eb;
+            }
+        }
+
+        .section-title {
+            font-size: 30px;
+            line-height: 1.33;
+            font-weight: $font-weight-medium;
+        }
+    }
+}
+
+.oleez-landing-section-about {
+    h2 {
+        font-size: 30px;
+        line-height: 1.33;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.67;
+    }
+
+    .landing-about-content {
+        margin-bottom: 70px;
+    }
+
+    .landing-about-feature {
+        .about-feature-icon {
+            margin-bottom: 45px;
+        }
+        .about-feature-title {
+            line-height: 1.1;
+            margin-bottom: 13px;
+        }
+        .about-feature-description {
+            font-size: 14px;
+            line-height: 1.71;
+            font-weight: $font-weight-light;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.oleez-landing-section-projects {
+
+    .section-title {
+        margin-bottom: 53px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .all-projects-link {
+            font-size: 20px;
+            font-weight: $font-weight-medium;
+            line-height: 2;
+            color: $body-color;
+            text-decoration: underline;
+        }
+    }
+
+    .landing-project-card {
+        border: 0;
+        border-radius: 0;
+        margin-right: 23px;
+        overflow: hidden;
+
+        img {
+            height: 300px;
+            border-radius: 0;
+            object-fit: cover;
+        }
+
+        .card-img-overlay {
+            left: auto;
+            width: 0;
+            background-color: #000;
+            padding-top: 170px;
+            width: 236px;
+            transform: translateX(100%);
+            transition: transform 0.4s ease-in-out;
+
+            @media(max-width: 991px) {
+                width: 175px;
+            }
+
+            @media(max-width: 767px) {
+                width: 50%;
+            }
+
+            @media(max-width: 400px) {
+                width: 160px;
+            }
+
+            .project-category {
+                font-size: 14px;
+                font-weight: $font-weight-medium;
+                line-height: 1.43;
+                color: $white;
+
+                @media(max-width: 767px) {
+                    font-size: 12px;
+                }
+            }
+
+            .project-title {
+                font-size: 20px;
+                font-weight: $font-weight-medium;
+                line-height: 1;
+                color: $white;
+
+                @media(max-width: 767px) {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        &.slick-active {
+            .card-img-overlay {
+                transform: translateX(0);
+                transition-delay: 0.5s;
+            }
+        }
+    }
+
+    .slick-navbtn-wrapper {
+        padding-top: 19px;
+
+        .slick-nav-btn {
+            width: 45px;
+            height: 45px;
+            background-color: $black;
+            border: 0;
+            border-radius: 0;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+.oleez-landing-section-team {
+    .landing-team-content {
+        margin-bottom: 52px;
+    }
+
+    .landing-team-card {
+        .team-card-img {
+            width: 100%;
+            margin-bottom: 39px;
+        }
+
+        .team-card-name {
+            font-size: 18px;
+            font-weight: $font-weight-medium;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .team-card-job {
+            font-size: 14px;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .team-card-social-links {
+            a {
+                font-size: 14px;
+                font-weight: $font-weight-bold;
+                line-height: 1;
+                margin-right: 10px;
+                color: $body-color;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+}
+
+.client-section-subtitle {
+    font-size: 15px;
+    line-height: 2;
+    margin-bottom: 48px;
+}
+
+.client-logo-wrapper {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .client-logo {
+        border: 1px solid #f1e2c2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 36px 28px;
+
+        img {
+            max-width: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.news-section-subtitle {
+    font-size: 15px;
+    line-height: 1.67;
+    margin-bottom: 62px;
+}
+
+.news-card {
+    padding: 32px 24px;
+    background-color: #f9f9f9;
+    height: 100%;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0;
+        transition: all 0.3s ease-in;
+    }
+
+    &:hover {
+        color: $white;
+
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &.news-card-1::before  {
+        background-image: linear-gradient(rgba($black, 0.3), rgba($black, 0.3)),url(../images/News_1@2x.jpg),;
+    }
+
+    &.news-card-2::before  {
+        background-image: linear-gradient(rgba($black, 0.3), rgba($black, 0.3)),url(../images/News_2@2x.jpg);
+    }
+
+    &.news-card-3::before  {
+        background-image: linear-gradient(rgba($black, 0.3), rgba($black, 0.3)),url(../images/News_3@2x.jpg);
+    }
+
+    .card-body {
+        position: relative;
+        z-index: 3;;
+    }
+
+    .author-info {
+        margin-bottom: 48px;
+
+        .author-avatar {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            margin-right: 7px;
+        }
+
+        .author-name {
+            font-size: 12px;
+            line-height: 1;
+            font-weight: $font-weight-normal;
+            margin-bottom: 5px;
+        }
+
+        .news-post-date {
+            font-size: 10px;
+            line-height: 1.2;
+            margin-bottom: 0;
+        }
+    }
+
+    .post-meta {
+        font-size: 12px;
+        line-height: 2.08;
+        margin-bottom: 4px;
+
+        .post-category {
+            color: theme-color();
+        }
+    }
+
+    .post-title {
+        font-size: 17px;
+        font-weight: $font-weight-medium;
+        line-height: 1.47;
+        margin-bottom: 21px;
+    }
+
+    .post-permalink {
+        font-size: 12px;
+        font-weight: $font-weight-medium;
+        line-height: 2.08;
+        color: inherit;
+
+        &::after {
+            content: "\2192";
+            display: inline-block;
+            margin-left: 6px;
+            color: inherit;
+            font-size: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &:hover {
+            color: inherit;
+            text-decoration: none;
+
+            &::after {
+                transform: translateX(5px);
+            }
+        }
+    }
+}
+
+.testimonial-section-content {
+    margin-bottom: 100px;
+    
+    @media (max-width: 767px) {
+        margin-bottom: 20px;
+    }
+}
+
+.landing-testimonial-card {
+    margin-right: 72px;
+
+    @media (max-width: 767px) {
+        margin-right:0;
+    }
+    
+    .testimonial-card-img {
+        width: 70px;
+        margin-right: 30px;
+
+        @media (max-width: 400px) {
+           width: 40px;
+           margin-right: 20px;
+        }
+    }
+    .testimonial-card-content {
+        font-size: 18px;
+        font-weight: $font-weight-light;
+        line-height: 1.44;
+        color: $black;
+        margin-bottom: 44px;
+    }
+    .testimonial-card-name {
+        font-size: 16px;
+        font-weight: $font-weight-medium;
+        line-height: 0.75;
+        color: #080808;
+        margin-bottom: 0;
+    }
+    .testimonial-card-company {
+        font-size: 12px;
+        line-height: 2.08;
+        margin-bottom: 0;
+    }
+}
+
+.testimonial-carousel-navbtn-wrapper {
+    padding-top: 19px;
+
+    @media (max-width: 767px) {
+        padding-bottom: 40px;
+    }
+
+    .slick-nav-btn {
+        width: 45px;
+        height: 45px;
+        background-color: $black;
+        border: 0;
+        border-radius: 0;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
